@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './style.css';
+import firstImage from "./first-picture.png";
+import secondImage from './second-picture.jpg';
+import transform from './goku-transform.mp4'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div 
+      className="my-container"
+      style={{border: "solid 1px black", maxWidth: "100vw"}}>
+        <h1 className="title red">Hi, I'm Son Gokû !</h1>
+        <br/>
+        <img src={firstImage} alt="First "/>
+        <br/>
+        <img
+        src={secondImage} 
+        alt="Second "/>
+      </div>
+      <h2 className="title red">Son Gokû Transformation</h2>
+      <video src={transform} controls style={{width: "320px" , height: "240px"}} />
+
     </div>
   );
 }
